@@ -69,7 +69,7 @@ Traing Program을 통해 얻은 패턴으로 **급락, 폭등 전에 미리 주�
 변화를 기록해놨다가 해당 회사의 급감 패턴 또는 급증 패턴과 80% 일치하면 그에 맞는 거래를 한다.
 아래 캡쳐는 거래 내역을 기록한 내용이다.
 <p align="center">
-	<img src="screenshots/transcation.png" width="40%"></img>
+	<img src="screenshots/transaction.png" width="40%"></img>
 </p>
 
 ### 결과
