@@ -24,7 +24,7 @@ Trade Prediction
 
 따라서, 회사별 주식변화 패턴을 찾기 위해 각 회사의 주식거래의 변화를 문자열로 표현하여, 급락 또는 급증한 시점을 기점으로 공통적인 변화를 관찰하여 패턴을 찾을 것이다.
 <p align="center">
-	<img src="screenshots/case.png" width="30%"></img>
+	<img src="screenshots/case.png" width="40%"></img>
 	<img src="screenshots/idea.png" width="60%"></img>
 </p>
 
@@ -37,7 +37,7 @@ Trade Prediction
 
 2. 구한 string에서 문자 A, B, C, D (주식 급락한 날) 또흔 문자 M, N, O, P(주식 폭등한 날)이 나왔을 때 해당 문자 앞 8자를 자른다.
 
-3. 2번을 통해 구한 집합에서 패턴을 찾기 위해 [**LCS 알고리즘**]()을 사용한다.
+3. 2번을 통해 구한 집합에서 패턴을 찾기 위해 [**LCS 알고리즘**](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem)을 사용한다.
 
 4. 3번을 통해 여러 개의 패턴이 나오면, 그 중 문자열의 길이가 가장 긴 것을 찾아 선택한다.
 
