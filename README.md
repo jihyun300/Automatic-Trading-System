@@ -9,6 +9,7 @@ Trade Prediction
 
 ### Process
 [1. Training Program](#1-training-program)
+
 [2. Trading Program](#2-trading-program)
 
 ## 1. Training Program
@@ -32,7 +33,7 @@ Trade Prediction
 1. 회사 별로 각 day에 대한 평귝 가격과 volume을 구하고, 아래와 같은 룰을 적용하여 100일 간의 주식변화를 **하나의 string**으로 표현하였다.
 <p align="center">
 	<img src="screenshots/pattern.png" width="60%"></img>
-	x: rate of price change compare to the previdous day<br>y: rate of volume change compare to the previous day
+	<br>x: rate of price change compare to the previdous day<br>y: rate of volume change compare to the previous day
 </p>
 
 2. 구한 string에서 문자 A, B, C, D (주식 급락한 날) 또흔 문자 M, N, O, P(주식 폭등한 날)이 나왔을 때 해당 문자 앞 8자를 자른다.
@@ -52,6 +53,7 @@ Trade Prediction
 <p align="center">
 	<img src="screenshots/structure.png" width="40%"></img>
 </p>
+
 ```
 Tick-Signal: client가 server에게 tick data를 요청, client는 end-signal을 받을 때까지 계속 tick-signal 전송
 End-Signal: client에게서 tick을 요구 받았을 때, 더 이상 전달한 Tick이 없을 때 전송
