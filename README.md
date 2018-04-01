@@ -13,7 +13,7 @@ Trade Prediction
 
 ## 1. Training Program
 주어진 Tick data를 이용하여 주식의 상승과 하락을 일으키는 **패턴과 신호**를 찾는다.
-> 제공된 데이터:
+> 제공된 데이터
 >	```
 >	약 15개 회사의 100일 간 주식변화를 기록해 놓은 Tick data
 >	1개의 txt파일당 하루치 변화 기록 -> 총 1500개의 파일
@@ -31,8 +31,8 @@ Trade Prediction
 ### 알고리즘
 1. 회사 별로 각 day에 대한 평귝 가격과 volume을 구하고, 아래와 같은 룰을 적용하여 100일 간의 주식변화를 **하나의 string**으로 표현하였다.
 <p align="center">
-	x: rate of price change compare to the previdous day<br>y: rate of volume change compare to the previous day
 	<img src="screenshots/pattern.png" width="60%"></img>
+	x: rate of price change compare to the previdous day<br>y: rate of volume change compare to the previous day
 </p>
 
 2. 구한 string에서 문자 A, B, C, D (주식 급락한 날) 또흔 문자 M, N, O, P(주식 폭등한 날)이 나왔을 때 해당 문자 앞 8자를 자른다.
@@ -50,13 +50,13 @@ Trade Prediction
 
 ### 시스템 구조
 <p align="center">
-	<img src="screenshots/structure.png" width="50%"></img>
+	<img src="screenshots/structure.png" width="40%"></img>
 </p>
 ```
-- Tick-Signal: client가 server에게 tick data를 요청, client는 end-signal을 받을 때까지 계속 tick-signal 전송
-- End-Signal: client에게서 tick을 요구 받았을 때, 더 이상 전달한 Tick이 없을 때 전송
-- One Tick: client에게 tick 1개 보내줌 (Form: CODE/DATE/TIME/PRICE/VOLUME/x)
--Transaction-Signal: client가 거래(사거나 팜)을 결정하면, client가 server에게 거래신호를 보냄 (Form: CODE/ B or S/ amount)
+Tick-Signal: client가 server에게 tick data를 요청, client는 end-signal을 받을 때까지 계속 tick-signal 전송
+End-Signal: client에게서 tick을 요구 받았을 때, 더 이상 전달한 Tick이 없을 때 전송
+One Tick: client에게 tick 1개 보내줌 (Form: CODE/DATE/TIME/PRICE/VOLUME/x)
+Transaction-Signal: client가 거래(사거나 팜)을 결정하면, client가 server에게 거래신호를 보냄 (Form: CODE/ B or S/ amount)
 ```
 
 ### 알고리즘
